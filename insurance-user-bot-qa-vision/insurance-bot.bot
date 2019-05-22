@@ -1,0 +1,42 @@
+{
+    "name": "genex-ss-bot",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3979/api/messages",
+            "id": "53934fc0-f1c3-11e8-a233-6115e3d01746",
+            "name": "development"
+        },
+        {
+            "type": "qna",
+            "endpointKey": "mWSyzoQ4cofl9ZjUDnfPJQ==!qAfZaUADc7M6CxlvVdBK/0wJ3ykbA3noNbMFD3E2GSNrZSltbWX7nj7u9eSWXkSS",
+            "kbId": "29d22685-2a91-4453-88fe-132009eafe8c",
+            "hostname": "https://claimantqna.azurewebsites.net/qnamaker",
+            "name": "Genna FAQ",
+            "id": "37"
+        },
+        {
+            "type": "endpoint",
+            "appId": "17129ce4-993f-4fe4-80c6-59fa311284fa",
+            "appPassword": "bnKBm33gpjw68GMglh0TnQ==!liAXCHTz1UeQkmADqI2b0FY1rmqB+OrzN7XkQCOP3/E=",
+            "endpoint": "https://genna-bot.azurewebsites.net/api/messages",
+            "name": "production2",
+            "id": "134"
+        },
+        {
+            "type": "endpoint",
+            "appId": "892d7245-dff9-4750-984e-69db5b18f270",
+            "appPassword": "fxdlwML1ckhHv/GIazH/kA==!Y5RjZmzuLqnvXLQMpxHbFrYZM6tBoE3cJnfDlo0qt9Y=",
+            "endpoint": "https://genna-ssam.azurewebsites.net/api/messages",
+            "name": "production",
+            "id": "24"
+        }
+    ],
+    "padlock": "pylBzjqatACJIfOEzAcUjw==!gEwxMtsOxjNdUD41mWPTdOy0S8yKw5ZR29W+IeNnQH5n1AKHcqXKL/JusiUquXuX",
+    "version": "2.0",
+    "path": "C:\\Users\\brharr\\OneDrive - Microsoft\\Development\\Customers\\Genex\\social-security-bot\\genex-ss-bot.bot",
+    "overrides": null
+}

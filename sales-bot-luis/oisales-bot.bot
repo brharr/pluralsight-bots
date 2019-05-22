@@ -1,0 +1,38 @@
+{
+    "name": "oisales-bot",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3979/api/messages",
+            "id": "38bc86f0-0305-11e9-95e5-75402e4234fc",
+            "name": "development"
+        },
+        {
+            "type": "luis",
+            "appId": "9a4d4b77-fdff-4099-bea5-dc5d8c24d4c7",
+            "authoringKey": "fYUvCAHV5j6ndNyFdZ8+uA==!HTRlQBRBxKFUmnjZfJoxdTudglt+zxKg5f3To0jTNc93SHlI9PYdGlrgviz8I6Jx",
+            "name": "oi-sales-en",
+            "subscriptionKey": "AghuatkjjJmRPREpXuKB6g==!J6l7I5fKQWSkV0Y+7Xnu/AaQ/wkOdD2XbqCiCg+FHZ+3lrcqmJsYkCDPslKnAu+P",
+            "region": "westus",
+            "version": "0.2",
+            "id": "44"
+        },
+        {
+            "type": "luis",
+            "appId": "c2d903a1-4fbe-49f3-835f-2ea250aacc3e",
+            "authoringKey": "GglpT6XRwTAi9ye6vz35fg==!qYkUrK5hS8aMel2Rta8XG0EZ8gpiMCAxwZTj84uii1L4IJJY61RDzjPuIj7SyxY2",
+            "name": "oi-sales-es",
+            "subscriptionKey": "",
+            "region": "westus",
+            "version": "0.1",
+            "id": "67"
+        }
+    ],
+    "padlock": "/F6kJiCEZ6I3kWesCGYIng==!5OE2EUkQu+kYQwz4lOGJEScL7gLz7wAmrgGiT1yeBK6ctF/rY/+KM82hgxrykGT8",
+    "version": "2.0",
+    "path": "C:\\Users\\brharr\\OneDrive - Microsoft\\Development\\Customers\\o-i\\oi-sales-bot\\oisales-bot.bot",
+    "overrides": null
+}

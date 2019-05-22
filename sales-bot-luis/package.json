@@ -1,0 +1,24 @@
+{
+  "name": "oi-sales-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "azure-cognitiveservices-language": "^1.0.0-preview",
+    "azure-keyvault": "^3.0.4",
+    "botbuilder": "^4.1.6",
+    "botbuilder-ai": "^4.1.6",
+    "botbuilder-dialogs": "^4.1.6",
+    "botframework-config": "^4.1.6",
+    "dotenv": "^6.1.0",
+    "mongodb": "^3.1.10",
+    "ms-rest-azure": "^2.5.9",
+    "restify": "^7.2.3"
+  },
+  "author": "Brian C. Harrison",
+  "license": "ISC"
+}
