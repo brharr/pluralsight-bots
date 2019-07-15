@@ -1,0 +1,24 @@
+{
+    "channelId": "emulator",
+    "conversation": {
+      "id": "e2507140-a373-11e9-8958-8969d1a4584d|livechat"
+    },
+    "from": {
+      "id": "687fe0f0-9b79-11e9-b517-6971ce32f866",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "id": "19dbb100-a375-11e9-a056-6b31cd24c56c",
+    "inputHint": "expectingInput",
+    "localTimestamp": "2019-07-10T20:44:55-04:00",
+    "locale": "en-US",
+    "recipient": {
+      "id": "143f7882-7fa3-4928-90ef-682356f354fa",
+      "role": "user"
+    },
+    "replyToId": "19da2a60-a375-11e9-a056-6b31cd24c56c",
+    "serviceUrl": "http://localhost:52195",
+    "text": "Please tell me what it is that you would like to do.",
+    "timestamp": "2019-07-11T00:44:55.184Z",
+    "type": "message"
+  }

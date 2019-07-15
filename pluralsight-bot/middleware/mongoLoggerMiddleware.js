@@ -1,10 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 const { Activity, TurnContext } = require('botbuilder');
 
-//const mongoURL = process.env.mongoURL;
-const cosmosURL = process.env.CUSTOMCONNSTR_cosmosURL;
-//console.log("ComsosURL: " + cosmosURL);
-const dbName = "genna_audit";
+const dbName = "bot_audit";
 const collName = "conversations";
 
 /**
@@ -19,8 +16,7 @@ class MongoDBMiddleware {
             useNewUrlParser: true
         }
         // Create a new MongoClient
-        //this.mongoDBClient = new MongoClient(mongoURL, mongoOptions);
-        this.mongoDBClient = new MongoClient(cosmosURL, mongoOptions);
+        this.mongoDBClient = new MongoClient(settings.cosmosURL, mongoOptions);
 
         if (!settings) {
             throw new Error('The settings parameter is required.');
@@ -63,6 +59,7 @@ class MongoDBMiddleware {
                     // Create each activity's Message Document and send it to MongoDB.
                     activities.forEach((activity) => {
                         const msgSentEvent = { name: this.botMsgSendEvent, properties: this.fillSendEventProperties(activity) };
+                        console.log('Message: ' + JSON.stringify(msgSentEvent));
                         collection.insertOne(msgSentEvent);
                         // this._telemetryClient.trackEvent(msgSentEvent);
                     });
@@ -75,6 +72,7 @@ class MongoDBMiddleware {
                     await nextDelete();
                     // Create the delete activity's Event Telemetry and send it to Application Insights.
                     const deleteMsgEvent = { name: this.botMsgDeleteEvent, properties: this.createBasicProperties(turnContext.activity) };
+                    console.log('Message: ' + JSON.stringify(deleteMsgEvent));
                     collection.insertOne(deleteMsgEvent);
                     // this._telemetryClient.trackEvent(deleteMsgEvent);
                 });
@@ -84,11 +82,13 @@ class MongoDBMiddleware {
                     await nextUpdate();
                     // Create the update activity's document object.
                     const msgUpdateEvent = { name: this.botMsgUpdateEvent, properties: this.fillUpdateEventProperties(turnContext.activity) };
+                    console.log('Message: ' + JSON.stringify(msgUpdateEvent));
                     collection.insertOne(msgUpdateEvent);
                     // this._telemetryClient.trackEvent(msgUpdateEvent);
                 });
 
                 // After registering the onSendActivities, onDeleteActivity, and onUpdateActivity handlers, send the msgReceivedEvent to Mongo
+                console.log('Message: ' + JSON.stringify(msgReceivedEvent));
                 collection.insertOne(msgReceivedEvent);
 
             } catch (err) {

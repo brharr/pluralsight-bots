@@ -1,0 +1,37 @@
+# Order-Status
+- can you give me the status of my order
+- provide my order status
+- what is the status of my order
+
+# Deliveries
+- what deliveries should I be expecting
+- provide my list of deliveries
+- list all deliveries for me
+- what deliveries are pending
+
+# Pending
+- what pending orders have not shipped
+- which orders show a status of pending
+- which orders are pending to be shipped
+
+# Truck-Time
+- what was the truck departure time
+- provide me the time when my truck left
+- provide me the time when my truck departed
+- when the truck left, what time was it
+- what time did my truck leave
+- what is the time where the loaded truck departed
+
+# Truck-Products
+- what products were on the truck that departed
+- when the loaded truck departed and with which products
+- when the loaded truck departed, what products were on board
+
+# Production
+- when is {productName=Cemetery Beach} {prodID=9781534312234} going to be produced
+- when will {productName=LiveWire vol 1 Fugitive} {prodID=9781682153017} going to be ready for delivery
+- what is the planned production date for {productName=Wynonna Earp Vol 1 Homecoming} {prodID=9781631407499}
+
+$productName:Simple
+$prodID:Simple
+$PREBUILD:dimension

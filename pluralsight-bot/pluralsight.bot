@@ -1,0 +1,27 @@
+{
+    "name": "pluralsight",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3979/api/messages",
+            "id": "687fe0f0-9b79-11e9-b517-6971ce32f866",
+            "name": "http://localhost:3979/api/messages"
+        },
+        {
+            "type": "luis",
+            "appId": "c6d4be68-ce72-47dc-ae66-efeae275ecbd",
+            "authoringKey": "5eec200a05984bc087c2c5f2c8c670ca",
+            "name": "Pluralsight-Sales-EN",
+            "region": "westus",
+            "version": "0.1",
+            "id": "69"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "path": "/Users/briancharrison/Dropbox/Development/pluralsight/azure-bot-plural-course/pluralsight-bots/pluralsight-bot/pluralsight.bot",
+    "overrides": null
+}

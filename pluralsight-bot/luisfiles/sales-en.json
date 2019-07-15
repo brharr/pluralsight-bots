@@ -1,0 +1,195 @@
+{
+  "intents": [
+    {
+      "name": "Order-Status"
+    },
+    {
+      "name": "Deliveries"
+    },
+    {
+      "name": "Pending"
+    },
+    {
+      "name": "Truck-Time"
+    },
+    {
+      "name": "Truck-Products"
+    },
+    {
+      "name": "Production"
+    }
+  ],
+  "entities": [
+    {
+      "name": "productName",
+      "roles": []
+    },
+    {
+      "name": "prodID",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "regex_entities": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "can you give me the status of my order",
+      "intent": "Order-Status",
+      "entities": []
+    },
+    {
+      "text": "provide my order status",
+      "intent": "Order-Status",
+      "entities": []
+    },
+    {
+      "text": "what is the status of my order",
+      "intent": "Order-Status",
+      "entities": []
+    },
+    {
+      "text": "what deliveries should I be expecting",
+      "intent": "Deliveries",
+      "entities": []
+    },
+    {
+      "text": "provide my list of deliveries",
+      "intent": "Deliveries",
+      "entities": []
+    },
+    {
+      "text": "list all deliveries for me",
+      "intent": "Deliveries",
+      "entities": []
+    },
+    {
+      "text": "what deliveries are pending",
+      "intent": "Deliveries",
+      "entities": []
+    },
+    {
+      "text": "what pending orders have not shipped",
+      "intent": "Pending",
+      "entities": []
+    },
+    {
+      "text": "which orders show a status of pending",
+      "intent": "Pending",
+      "entities": []
+    },
+    {
+      "text": "which orders are pending to be shipped",
+      "intent": "Pending",
+      "entities": []
+    },
+    {
+      "text": "what was the truck departure time",
+      "intent": "Truck-Time",
+      "entities": []
+    },
+    {
+      "text": "provide me the time when my truck left",
+      "intent": "Truck-Time",
+      "entities": []
+    },
+    {
+      "text": "provide me the time when my truck departed",
+      "intent": "Truck-Time",
+      "entities": []
+    },
+    {
+      "text": "when the truck left, what time was it",
+      "intent": "Truck-Time",
+      "entities": []
+    },
+    {
+      "text": "what time did my truck leave",
+      "intent": "Truck-Time",
+      "entities": []
+    },
+    {
+      "text": "what is the time where the loaded truck departed",
+      "intent": "Truck-Time",
+      "entities": []
+    },
+    {
+      "text": "what products were on the truck that departed",
+      "intent": "Truck-Products",
+      "entities": []
+    },
+    {
+      "text": "when the loaded truck departed and with which products",
+      "intent": "Truck-Products",
+      "entities": []
+    },
+    {
+      "text": "when the loaded truck departed, what products were on board",
+      "intent": "Truck-Products",
+      "entities": []
+    },
+    {
+      "text": "when is Cemetery Beach 9781534312234 going to be produced",
+      "intent": "Production",
+      "entities": [
+        {
+          "entity": "productName",
+          "startPos": 8,
+          "endPos": 21
+        },
+        {
+          "entity": "prodID",
+          "startPos": 23,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "when will LiveWire vol 1 Fugitive 9781682153017 going to be ready for delivery",
+      "intent": "Production",
+      "entities": [
+        {
+          "entity": "productName",
+          "startPos": 10,
+          "endPos": 32
+        },
+        {
+          "entity": "prodID",
+          "startPos": 34,
+          "endPos": 46
+        }
+      ]
+    },
+    {
+      "text": "what is the planned production date for Wynonna Earp Vol 1 Homecoming 9781631407499",
+      "intent": "Production",
+      "entities": [
+        {
+          "entity": "productName",
+          "startPos": 40,
+          "endPos": 68
+        },
+        {
+          "entity": "prodID",
+          "startPos": 70,
+          "endPos": 82
+        }
+      ]
+    }
+  ],
+  "patterns": [],
+  "patternAnyEntities": [],
+  "prebuiltEntities": [
+    {
+      "name": "dimension",
+      "roles": []
+    }
+  ],
+  "luis_schema_version": "3.0.0",
+  "versionId": "0.1",
+  "name": "sales-en",
+  "desc": "",
+  "culture": "en-us"
+}

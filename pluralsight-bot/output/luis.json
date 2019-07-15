@@ -1,0 +1,76 @@
+{
+    "recognizerResult": {
+      "entities": {
+        "$instance": {}
+      },
+      "intents": {
+        "Deliveries": {
+          "score": 0.0115937768
+        },
+        "Inventory": {
+          "score": 0.009132366
+        },
+        "None": {
+          "score": 0.007901343
+        },
+        "Order-Status": {
+          "score": 0.9171729
+        },
+        "Pending": {
+          "score": 0.009295427
+        },
+        "Production": {
+          "score": 0.00147497386
+        },
+        "Truck-Products": {
+          "score": 0.00253377622
+        },
+        "Truck-Time": {
+          "score": 0.00570397126
+        }
+      },
+      "luisResult": {
+        "entities": [],
+        "intents": [
+          {
+            "intent": "Order-Status",
+            "score": 0.9171729
+          },
+          {
+            "intent": "Deliveries",
+            "score": 0.0115937768
+          },
+          {
+            "intent": "Pending",
+            "score": 0.009295427
+          },
+          {
+            "intent": "Inventory",
+            "score": 0.009132366
+          },
+          {
+            "intent": "None",
+            "score": 0.007901343
+          },
+          {
+            "intent": "Truck-Time",
+            "score": 0.00570397126
+          },
+          {
+            "intent": "Truck-Products",
+            "score": 0.00253377622
+          },
+          {
+            "intent": "Production",
+            "score": 0.00147497386
+          }
+        ],
+        "query": "check my order status",
+        "topScoringIntent": {
+          "intent": "Order-Status",
+          "score": 0.9171729
+        }
+      },
+      "text": "check my order status"
+    }
+  }

@@ -1,6 +1,8 @@
 const { ComponentDialog, WaterfallDialog, TextPrompt } = require('botbuilder-dialogs');
 const { LuisRecognizer } = require('botbuilder-ai');
 
+const axios = require('axios');
+
 //Dialog IDs
 const TOPMENU_DIALOG = 'topMenu';
 
@@ -19,7 +21,7 @@ class TopMenu extends ComponentDialog
 {
     static get Name() { return TOPMENU_DIALOG; }
 
-    constructor(luisApplication, luisApplicationES, luisPredictionOptions, conversationState, userProfileAccessor, conversationAccessor) {
+    constructor(luisApplication, luisPredictionOptions, searchConfig, conversationState, userProfileAccessor, conversationAccessor) {
         super(TOPMENU_DIALOG);
 
         // Add control flow dialogs
@@ -30,7 +32,13 @@ class TopMenu extends ComponentDialog
 
         this.topMenu = this;
         this.luisRecognizer = new LuisRecognizer(luisApplication, luisPredictionOptions, true);
-        this.luisRecognizerES = new LuisRecognizer(luisApplicationES, luisPredictionOptions, true);
+        //this.luisRecognizerES = new LuisRecognizer(luisApplicationES, luisPredictionOptions, true);
+
+        this.searchURL = searchConfig.searchEndpoint + 
+            "/indexes/" + searchConfig.searchIndex + 
+            "/docs?api-version=2015-02-28" +
+            "&search=";
+        this.searchHeaders = {'api-key': searchConfig.searchKey};
         
         this.addDialog(new TextPrompt(TOPMENU_TEXT));
 
@@ -76,7 +84,29 @@ class TopMenu extends ComponentDialog
                 
                 // Since the LuisRecognizer was configured to include the raw results, get the `topScoringIntent` as specified by LUIS.
                 const topIntent = luisResults.luisResult.topScoringIntent;
-                return await step.context.sendActivity("LUIS Intent: " + topIntent.intent);
+                if(topIntent.intent === 'Inventory')
+                {
+                    // Need to get the Entity mentioned in the utterance to send to Azure Search
+                    let entityValue = luisResults.entities['productName'][0];
+                    //console.log("LUIS Entity found: " + entityValue);
+
+                    let processSearchURL = this.searchURL + entityValue;
+                    //console.log("Search URL: " + processSearchURL);
+                    let options = {
+                        headers: this.searchHeaders,
+                    }
+
+                    try {
+                        const response = await axios.get(processSearchURL, options);
+                        const data = response.data;
+                        //console.log(data);
+                        return await step.context.sendActivity("Search Results: " + JSON.stringify(data));
+                    } catch (error) {
+                        console.log(error);
+                    }
+                }
+                else 
+                    return await step.context.sendActivity("LUIS Intent: " + topIntent.intent);
             }
         } catch (error)
         {

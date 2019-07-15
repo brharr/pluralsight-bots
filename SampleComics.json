@@ -1,0 +1,94 @@
+[
+    {
+        "barcode" : "9781682153017",
+        "title" : "LiveWire Vol 1 Fugitive",
+        "authors" : [ "Vita Ayala" ],
+        "artists" : [ "Raul Allen", "Patricia Martin" ],
+        "type": "Novel",
+        "age" : "New",
+        "quantity": 1,
+        "price": 9.99
+    },
+    {
+        "barcode" : "9781534312234",
+        "title" : "Cemetery Beach",
+        "authors" : [ "Warren Ellis" ],
+        "artists" : [ "Jason Howard" ],
+        "type": "Novel",
+        "age" : "New",
+        "quantity": 1,
+        "price": 17.99
+    },
+    {
+        "barcode" : "9781631407499",
+        "title" : "Wynonna Earl Vol 1 Homecoming",
+        "authors" : [ "Beau Smith" ],
+        "artists" : [ "Lora Innes", "Chris Evenhuis" ],
+        "type": "Novel",
+        "age" : "New",
+        "quantity": 1,
+        "price": 19.99
+    },
+    {
+        "barcode" : "9781401240417",
+        "title" : "Harley Quinn: Night and Day Vol. 2",
+        "authors" : [ "Karl Kesel" ],
+        "artists" : [ "Terry Dodson", "Pete Woods" ],
+        "type": "Novel",
+        "age" : "New",
+        "quantity": 1,
+        "price": 16.99
+    },
+    {
+        "barcode" : "9781401217358",
+        "title" : "Tales of the Batman Tim Sale",
+        "authors" : [ "Alan Grant", "James Robinson", "Darwyn Cooke", "Kelley Puckett" ],
+        "artists" : [ "Tim Sale" ],
+        "type": "Novel",
+        "age" : "New",
+        "quantity": 1,
+        "price": 19.99
+    },
+    {
+        "barcode" : "9781682151938",
+        "title" : "4001 A.D. Deluxe Edition",
+        "authors" : [ "Matt Kindt", "Robert Venditti", "Jeff Lemire", "Jody Houser", "Rafer Roberts", "Fred Van Lente"],
+        "artists" : [ "Clayton Crain", "David Mack", "Clayton Henry", "CAFU", "Doug Braithwaite", "Robert Gill", "Tomas Giorello" ],
+        "type": "Novel",
+        "age" : "New",
+        "quantity": 1,
+        "price": 39.99
+    },
+    {
+        "barcode" : "9781401243999",
+        "title" : "All Star Western : The Black Diamond Probability Vol 3",
+        "authors" : [ "Jimmy Palmiotti", "Justin Gray" ],
+        "artists" : [ "Moritat", "Phil Winslade" ],
+        "type": "Novel",
+        "age" : "New",
+        "quantity": 1,
+        "price": 16.99
+    },
+    {
+        "barcode" : "9781942275756",
+        "title" : "Van Helsing vs The Werewolf",
+        "authors" : [ "Chick Dixon" ],
+        "artists" : [ "Allan Otero" ],
+        "type": "Novel",
+        "age" : "New",
+        "quantity": 1,
+        "price": 19.99
+    },
+    {
+        "barcode" : "9781607062950",
+        "title" : "Orc Stain",
+        "authors" : [ "James Stokoe" ],
+        "artists" : [ "James Stokoe" ],
+        "type": "Novel",
+        "age" : "New",
+        "quantity": 1,
+        "price": 17.99
+    }
+]
+
+

@@ -1,0 +1,27 @@
+{
+  "channelData": {
+    "clientActivityID": "15628059038800.4qvtnod0irv"
+  },
+  "channelId": "emulator",
+  "conversation": {
+    "id": "e2507140-a373-11e9-8958-8969d1a4584d|livechat"
+  },
+  "from": {
+    "id": "143f7882-7fa3-4928-90ef-682356f354fa",
+    "name": "User",
+    "role": "user"
+  },
+  "id": "1f0b0db0-a375-11e9-a056-6b31cd24c56c",
+  "localTimestamp": "2019-07-10T20:45:03-04:00",
+  "locale": "en-US",
+  "recipient": {
+    "id": "687fe0f0-9b79-11e9-b517-6971ce32f866",
+    "name": "Bot",
+    "role": "bot"
+  },
+  "serviceUrl": "http://localhost:52195",
+  "text": "check my order status",
+  "textFormat": "plain",
+  "timestamp": "2019-07-11T00:45:03.882Z",
+  "type": "message"
+}
