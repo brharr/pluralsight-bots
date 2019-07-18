@@ -13,7 +13,7 @@ class ComicBot {
      * @param {UserState} User state to persist boolean flag to indicate if the bot had 
      * already welcomed the user as well as all user profile information
      */
-    constructor(luisApplication, luisPredictionOptions, azureSearchConfig, conversationState, userState) {
+    constructor(luisApplication, luisApplicationES, luisPredictionOptions, azureSearchConfig, conversationState, userState) {
         // Creates a new user profile property accessor.
         this.userProfileAccessor = userState.createProperty(USERPROFILE);
         this.dialogState = conversationState.createProperty('dialogState');

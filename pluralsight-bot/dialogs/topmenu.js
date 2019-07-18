@@ -21,7 +21,7 @@ class TopMenu extends ComponentDialog
 {
     static get Name() { return TOPMENU_DIALOG; }
 
-    constructor(luisApplication, luisPredictionOptions, searchConfig, conversationState, userProfileAccessor, conversationAccessor) {
+    constructor(luisApplication, luisApplicationES, luisPredictionOptions, searchConfig, conversationState, userProfileAccessor, conversationAccessor) {
         super(TOPMENU_DIALOG);
 
         // Add control flow dialogs
@@ -32,7 +32,7 @@ class TopMenu extends ComponentDialog
 
         this.topMenu = this;
         this.luisRecognizer = new LuisRecognizer(luisApplication, luisPredictionOptions, true);
-        //this.luisRecognizerES = new LuisRecognizer(luisApplicationES, luisPredictionOptions, true);
+        this.luisRecognizerES = new LuisRecognizer(luisApplicationES, luisPredictionOptions, true);
 
         this.searchURL = searchConfig.searchEndpoint + 
             "/indexes/" + searchConfig.searchIndex + 

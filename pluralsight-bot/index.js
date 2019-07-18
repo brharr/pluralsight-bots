@@ -40,7 +40,7 @@ startBot(conversationState, userState);
 
 async function startBot(convo, user) {
     let secretConfig = await getSecrets();
-    let bot = await returnBot(convo, user);
+    let bot = await returnBot(secretConfig, convo, user);
     
     await startServer(bot);
 }
@@ -80,15 +80,15 @@ async function getSecrets() {
     let keyVaultClient = new KeyVault.KeyVaultClient(creds);
     //let bingKey = await keyVaultClient.getSecret(vaultUri, "bingKey", "");
     let luisAppEN = await keyVaultClient.getSecret(vaultUri, "luisENAppID", "");
-    //let luisAppES = await keyVaultClient.getSecret(vaultUri, "luisESAppID", "");
+    let luisAppES = await keyVaultClient.getSecret(vaultUri, "luisESAppID", "");
     let luisAuthKey = await keyVaultClient.getSecret(vaultUri, "luisAuthKey", "");
-    let searchKey = await keyVaultClient.getSecret(vaultUri, "luisSearchKey", "");
+    let searchKey = await keyVaultClient.getSecret(vaultUri, "searchKey", "");
     let auditConnString = await keyVaultClient.getSecret(vaultUri, "auditConnString", "");
 
     let cognitiveConfig = {
         luisauth: luisAuthKey.value,
         luisAppEN: luisAppEN.value,
-        //luisAppES: luisAppES.value,
+        luisAppES: luisAppES.value,
         //bingKey: bingKey.value,
         searchKey: searchKey.value,
         auditConn: auditConnString.value
@@ -96,7 +96,7 @@ async function getSecrets() {
     return cognitiveConfig;
 }
 
-// returnBot function for using the Bot file
+// returnBot function for using the Environment Variables or a .env file
 /* async function returnBot(convo, user) {
     let luisApplication = {
         applicationId: process.env.luisENAppID,
@@ -134,11 +134,11 @@ async function returnBot(secretConfig, convo, user) {
         endpointKey: secretConfig.luisauth,
         endpoint: process.env.luisEndpoint
     };
-    //let luisApplicationES = {
-    //    applicationId: secretConfig.luisAppES,
-    //    endpointKey: secretConfig.luisauth,
-    //    endpoint: process.env.luisEndpoint
-    //};
+    let luisApplicationES = {
+        applicationId: secretConfig.luisAppES,
+        endpointKey: secretConfig.luisauth,
+        endpoint: process.env.luisEndpoint
+    };
     
     // Create configuration for LuisRecognizer's runtime behavior.
     let luisPredictionOptions = {
@@ -146,7 +146,7 @@ async function returnBot(secretConfig, convo, user) {
         log: true,
         staging: false,
         spellCheck: true,
-        bingSpellCheckSubscriptionKey: secretConfig.bingKey
+        bingSpellCheckSubscriptionKey: ""
     };
 
     let azureSearchConfig = {
@@ -155,5 +155,5 @@ async function returnBot(secretConfig, convo, user) {
         searchEndpoint: process.env.searchEndpoint
     }
 
-    return new ComicBot(luisApplication, luisPredictionOptions, azureSearchConfig, convo, user);
+    return new ComicBot(luisApplication, luisApplicationES, luisPredictionOptions, azureSearchConfig, convo, user);
 }
