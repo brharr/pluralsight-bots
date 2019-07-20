@@ -26,10 +26,16 @@ let conversationState = new ConversationState(memoryStorage);
 let userState = new UserState(memoryStorage);
 
 // Auditing configuration options to determine what should be logged
-const mongoDBSettings = {
+/* const mongoDBSettings = {
     logOriginalMessage: true,
     logUserName: true,
     cosmosURL: process.env.auditConnString
+} */
+let connString = getSecretConnString();
+const mongoDBSettings = {
+    logOriginalMessage: true,
+    logUserName: true,
+    cosmosURL: connString
 }
 if (process.env.auditFunction == 1) {
     adapter.use(new MongoDBMiddleware(mongoDBSettings));
@@ -83,17 +89,39 @@ async function getSecrets() {
     let luisAppES = await keyVaultClient.getSecret(vaultUri, "luisESAppID", "");
     let luisAuthKey = await keyVaultClient.getSecret(vaultUri, "luisAuthKey", "");
     let searchKey = await keyVaultClient.getSecret(vaultUri, "searchKey", "");
-    let auditConnString = await keyVaultClient.getSecret(vaultUri, "auditConnString", "");
 
     let cognitiveConfig = {
         luisauth: luisAuthKey.value,
         luisAppEN: luisAppEN.value,
         luisAppES: luisAppES.value,
         //bingKey: bingKey.value,
-        searchKey: searchKey.value,
-        auditConn: auditConnString.value
+        searchKey: searchKey.value
     }
     return cognitiveConfig;
+}
+
+// Had to create a separate function just for the Audit Conn String because of the required
+// order of how things are processed in a Bot
+async function getSecretConnString() {
+    // Service Principal Information if Managed Service Identity is not turned on.
+    const clientId = process.env.keyvaultsp;
+    const domain = process.env.tenant;
+    const key = process.env.keyvaultspkey;
+
+    // Need to get required values out of Key Vault for connecting to Cognitive Services
+    const vaultUri = 'https://' + process.env.vaultName + ".vault.azure.net";   
+
+    let creds = null;
+    if (process.env.useMSAZUREmsi === 1){
+        creds = await msRestAzure.loginWithAppServiceMSI();
+    } else {
+        creds = await msRestAzure.loginWithServicePrincipalSecret(clientId, key, domain);
+    }
+
+    let keyVaultClient = new KeyVault.KeyVaultClient(creds);
+    let auditConnString = await keyVaultClient.getSecret(vaultUri, "auditConnString", "");
+
+    return auditConnString;
 }
 
 // returnBot function for using the Environment Variables or a .env file
