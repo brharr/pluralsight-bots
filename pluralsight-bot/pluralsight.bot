@@ -14,14 +14,22 @@
             "type": "luis",
             "appId": "c6d4be68-ce72-47dc-ae66-efeae275ecbd",
             "authoringKey": "5eec200a05984bc087c2c5f2c8c670ca",
+            "id": "69",
             "name": "Pluralsight-Sales-EN",
             "region": "westus",
-            "version": "0.1",
-            "id": "69"
+            "version": "0.1"
+        },
+        {
+            "type": "endpoint",
+            "appId": "d64932f5-4511-41a6-bf00-531cc2974fcc",
+            "appPassword": "w*Ta0WyyBK2w/:*6CcPZ5MuvkjXlD45b",
+            "endpoint": "https://pluralsightbot.azurewebsites.net/api/messages",
+            "name": "Production",
+            "id": "189"
         }
     ],
     "padlock": "",
     "version": "2.0",
-    "path": "/Users/briancharrison/Dropbox/Development/pluralsight/azure-bot-plural-course/pluralsight-bots/pluralsight-bot/pluralsight.bot",
-    "overrides": null
+    "overrides": null,
+    "path": "/Users/briancharrison/Dropbox/Development/pluralsight/azure-bot-plural-course/pluralsight-bots/pluralsight-bot/pluralsight.bot"
 }

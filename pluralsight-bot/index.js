@@ -101,7 +101,7 @@ async function getSecrets() {
 }
 
 // Had to create a separate function just for the Audit Conn String because of the required
-// order of how things are processed in a Bot
+// order of how things are processed in a Bot   
 async function getSecretConnString() {
     // Service Principal Information if Managed Service Identity is not turned on.
     const clientId = process.env.keyvaultsp;

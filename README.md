@@ -5,10 +5,11 @@ Repository for the Conversational AI application that is discussed within the Pl
 
 This Repo contains all of the code necessary to deploy the same Bot that was developed and deployed within the course as well as all reference files, specifically:
 
-* luisfile - Contains LuDown and JSON Output of the LUIS Applications
+* luisfiles - Contains LuDown and JSON Output of the LUIS Applications
 * output - Contains the example API Output files
 * pluralsight-bot - Contains all of the source code to run the Bot Locally or in Azure
 * SampleComics.json - This is the JSON used to create a CosmosDB that the Azure Search Index was built off of.
+* pluralsight.bot - Bot file used for the Bot Framework Emulator to connect to your bot and LUIS application.
 
 If you are working with the code in your local development environment, then you will need to create your own .env file to store the required environment variables. An example of this file can be seen below:
 
@@ -28,7 +29,7 @@ If you are doing everything local, then you will need to add the following value
 
 searchKey, luisAuthor, luisENAppID, luisESAppID, auditConnString
 
-#Additional Resources
+## Additional Resources
 
 All of the available links that were provided as addition documentation for the modules can be found in a list below:
 
