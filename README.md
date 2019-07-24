@@ -33,3 +33,19 @@ searchKey, luisAuthor, luisENAppID, luisESAppID, auditConnString
 
 All of the available links that were provided as addition documentation for the modules can be found in a list below:
 
+* [Bot Framework](https://github.com/microsoft/botframework)
+* [BotBuilder Tools](https://github.com/microsoft/botbuilder-tools)
+* [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator)
+* [Bot Framework Samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+* [Virtual Assistant Template](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-virtual-assistant-introduction?view=azure-bot-service-4.0)
+* [Bot Design Blog](https://briancharrison.ghost.io/best-practices-collaborative-approach-to-chatbot-design-using-bot-framework-tools/)
+* [Azure CosmosDB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
+* [Azure Search](https://docs.microsoft.com/en-us/azure/search/)
+* [Bot Framework SDK – State Management](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0)
+* [Bot Framework SDK – LUIS](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-luis?view=azure-bot-service-4.0&tabs=csharp)
+* [Bot Framework SDK - Middleware](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-middleware?view=azure-bot-service-4.0)
+* [Azure 101 – Security](https://briancharrison.ghost.io/azure-101-security/)
+* [Azure Key Vault Docs](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis)
+* [Azure App Services Docs](https://docs.microsoft.com/en-us/azure/app-service/)
+* [Bot Channels Reference](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0)
+
