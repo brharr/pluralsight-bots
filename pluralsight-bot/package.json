@@ -9,7 +9,7 @@
   "author": "Brian C Harrison",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "azure-keyvault": "^3.0.4",
     "botbuilder": "^4.4.0",
     "botbuilder-ai": "^4.4.0",
